@@ -14,17 +14,13 @@ public class Inventory {
         return equipment;
     }
 
-    public ArrayList<Item> getListOfEquipmentItems(){
-        return new ArrayList<>(List.of(getEquipment().getLeftHand(),
-                                        getEquipment().getRightHand(),
-                                        getEquipment().getHead(),
-                                        getEquipment().getFeet(),
-                                        getEquipment().getChest()));
-    }
 
     public int getBaseDamage(){
-        return getListOfEquipmentItems().stream().mapToInt(Item::getBaseDamage).sum();
+        return equipment.allItems().stream().mapToInt(Item::getBaseDamage).sum();
     }
+
+
+    public float getDamageModifier(){return (float) equipment.allItems().stream().mapToDouble(Item::getDamageModifier).sum();}
 
 
     }
