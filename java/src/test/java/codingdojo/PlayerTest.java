@@ -1,5 +1,7 @@
 package codingdojo;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -15,12 +17,12 @@ public class PlayerTest {
         Inventory inventory = mock(Inventory.class);
         Stats stats = mock(Stats.class);
         SimpleEnemy target = mock(SimpleEnemy.class);
-        Armor armor = mock(Armor.class);
 
-        when(inventory.getEquipment()).thenReturn(getEquipment());
+        when(inventory.getBaseDamage()).thenReturn(10);
+        when(inventory.getDamageModifier()).thenReturn(1.0f);
         when(stats.getStrength()).thenReturn(0);
-        when(armor.getDamageSoak()).thenReturn(5);
         when(target.getArmor()).thenReturn(new SimpleArmor(5));
+
 
         Damage damage = new Player(inventory, stats).calculateDamage(target);
         assertEquals(5, damage.getAmount());
@@ -46,5 +48,13 @@ public class PlayerTest {
           item,
           item,
           item);
+    }
+
+    public ArrayList<Item> getListOfEquipmentItems(){
+        return new ArrayList<>(List.of(getEquipment().getLeftHand(),
+          getEquipment().getRightHand(),
+          getEquipment().getHead(),
+          getEquipment().getFeet(),
+          getEquipment().getChest()));
     }
 }
