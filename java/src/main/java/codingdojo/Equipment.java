@@ -1,6 +1,8 @@
 package codingdojo;
 
 
+import java.util.List;
+
 class Equipment {
     // TODO add a ring item that may be equipped
     //  that may also add damage modifier
@@ -32,5 +34,9 @@ class Equipment {
     }
     Item getChest() {
         return chest;
+    }
+
+    List<Item> allItems() {
+        return List.of(leftHand, rightHand, head, feet, chest);
     }
 }
