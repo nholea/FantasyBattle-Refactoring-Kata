@@ -39,22 +39,4 @@ public class PlayerTest {
         assertEquals(10, damage.getAmount());
     }
 
-    Equipment getEquipment(){
-        Item rigthHandItem = new BasicItem("flashy sword of danger", 10, 1.0f);
-        Item item = new BasicItem("",0,0);
-
-        return new Equipment(item,
-          rigthHandItem,
-          item,
-          item,
-          item);
-    }
-
-    public ArrayList<Item> getListOfEquipmentItems(){
-        return new ArrayList<>(List.of(getEquipment().getLeftHand(),
-          getEquipment().getRightHand(),
-          getEquipment().getHead(),
-          getEquipment().getFeet(),
-          getEquipment().getChest()));
-    }
 }
