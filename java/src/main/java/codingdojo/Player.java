@@ -26,18 +26,22 @@ class Player extends Target {
             soak = totalDamage;
         } else if (target instanceof SimpleEnemy) {
             SimpleEnemy simpleEnemy = (SimpleEnemy) target;
-            soak = Math.round(
-                simpleEnemy.getArmor().getDamageSoak() *
-                (
-                    ((float) simpleEnemy.getBuffs()
-                        .stream()
-                        .mapToDouble(Buff::soakModifier)
-                        .sum()) +
-                    1f
-                )
-            );
+            soak = getSoak1(simpleEnemy);
         }
         return soak;
+    }
+
+    private static int getSoak1(SimpleEnemy simpleEnemy) {
+        return Math.round(
+          simpleEnemy.getArmor().getDamageSoak() *
+            (
+              ((float) simpleEnemy.getBuffs()
+                .stream()
+                .mapToDouble(Buff::soakModifier)
+                .sum()) +
+                1f
+            )
+        );
     }
 
 }

@@ -25,6 +25,21 @@ public class PlayerTest {
         Damage damage = new Player(inventory, stats).calculateDamage(target);
         assertEquals(5, damage.getAmount());
     }
+    @Test
+    void calculatesDamageWhenPlayerIsEquippedWithExcaliburInHisRightHand() {
+        Inventory inventory = mock(Inventory.class);
+        Stats stats = mock(Stats.class);
+        SimpleEnemy target = mock(SimpleEnemy.class);
+
+        when(inventory.getBaseDamage()).thenReturn(20);
+        when(inventory.getDamageModifier()).thenReturn(1.5f);
+        when(stats.getStrength()).thenReturn(0);
+        when(target.getArmor()).thenReturn(new SimpleArmor(5));
+
+
+        Damage damage = new Player(inventory, stats).calculateDamage(target);
+        assertEquals(25, damage.getAmount());
+    }
 
     // choose this one if you are not familiar with mocks
     @Disabled("Test is not finished yet")
