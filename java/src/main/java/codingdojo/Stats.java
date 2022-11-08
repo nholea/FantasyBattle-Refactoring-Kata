@@ -13,7 +13,7 @@ public class Stats {
         return strength;
     }
 
-    public float strengthModifier(){
+    public float getStrengthModifier(){
         return getStrength() * 0.1f;
     }
 }

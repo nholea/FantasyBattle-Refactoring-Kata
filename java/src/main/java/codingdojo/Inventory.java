@@ -1,8 +1,5 @@
 package codingdojo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Inventory {
     private Equipment equipment;
 
@@ -16,11 +13,11 @@ public class Inventory {
 
 
     public int getBaseDamage(){
-        return equipment.allItems().stream().mapToInt(Item::getBaseDamage).sum();
+        return equipment.getAllItems().stream().mapToInt(Item::getBaseDamage).sum();
     }
 
 
-    public float getDamageModifier(){return (float) equipment.allItems().stream().mapToDouble(Item::getDamageModifier).sum();}
+    public float getDamageModifier(){return (float) equipment.getAllItems().stream().mapToDouble(Item::getDamageModifier).sum();}
 
 
     }

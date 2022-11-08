@@ -36,7 +36,7 @@ class Equipment {
         return chest;
     }
 
-    List<Item> allItems() {
+    List<Item> getAllItems() {
         return List.of(leftHand, rightHand, head, feet, chest);
     }
 }
