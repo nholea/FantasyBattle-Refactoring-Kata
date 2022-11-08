@@ -48,16 +48,4 @@ public class PlayerTest {
 
         assertEquals(expectedDamage, damage.getAmount());
     }
-
-    // choose this one if you are not familiar with mocks
-    @Disabled("Test is not finished yet")
-    @Test
-    void damageCalculations() {
-        Inventory inventory = new Inventory(null);
-        Stats stats = new Stats(0);
-        SimpleEnemy target = new SimpleEnemy(null, null);
-        Damage damage = new Player(inventory, stats).calculateDamage(target);
-        assertEquals(10, damage.getAmount());
-    }
-
 }
