@@ -7,9 +7,6 @@ public class Inventory {
         this.equipment = equipment;
     }
 
-    Equipment getEquipment() {
-        return equipment;
-    }
 
     public int getBaseDamage(){
         return equipment.getAllItems().stream().mapToInt(Item::getBaseDamage).sum();

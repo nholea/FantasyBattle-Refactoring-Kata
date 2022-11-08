@@ -20,22 +20,6 @@ class Equipment {
         this.chest = chest;
     }
 
-    Item getLeftHand() {
-        return leftHand;
-    }
-    Item getRightHand() {
-        return rightHand;
-    }
-    Item getHead() {
-        return head;
-    }
-    Item getFeet() {
-        return feet;
-    }
-    Item getChest() {
-        return chest;
-    }
-
     List<Item> getAllItems() {
         return List.of(leftHand, rightHand, head, feet, chest);
     }
