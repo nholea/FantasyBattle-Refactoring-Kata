@@ -19,7 +19,7 @@ public class PlayerTest {
         when(inventory.getBaseDamage()).thenReturn(10);
         when(inventory.getDamageModifier()).thenReturn(1.0f);
         when(stats.getStrength()).thenReturn(0);
-        when(target.getArmor()).thenReturn(new SimpleArmor(5));
+        when(target.getSoak()).thenReturn(5);
 
 
         Damage damage = new Player(inventory, stats).calculateDamage(target);
@@ -34,7 +34,7 @@ public class PlayerTest {
         when(inventory.getBaseDamage()).thenReturn(20);
         when(inventory.getDamageModifier()).thenReturn(1.5f);
         when(stats.getStrength()).thenReturn(0);
-        when(target.getArmor()).thenReturn(new SimpleArmor(5));
+        when(target.getSoak()).thenReturn(5);
 
 
         Damage damage = new Player(inventory, stats).calculateDamage(target);
