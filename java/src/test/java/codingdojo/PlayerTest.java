@@ -22,14 +22,13 @@ public class PlayerTest {
         Inventory inventory = mock(Inventory.class);
         Stats stats = mock(Stats.class);
         SimpleEnemy target = mock(SimpleEnemy.class);
-
         when(inventory.getBaseDamage()).thenReturn(baseDamage);
         when(inventory.getDamageModifier()).thenReturn(damageModifier);
         when(stats.getStrength()).thenReturn(STRENGTH);
         when(target.getSoak()).thenReturn(DAMAGE_SOAK);
 
-
         Damage damage = new Player(inventory, stats).calculateDamage(target);
+
         assertEquals(expectedDamage, damage.getAmount());
     }
 
@@ -39,7 +38,6 @@ public class PlayerTest {
         Inventory inventory = mock(Inventory.class);
         Stats stats = mock(Stats.class);
         SimpleEnemy target = mock(SimpleEnemy.class);
-
         when(inventory.getBaseDamage()).thenReturn(baseDamage);
         when(inventory.getDamageModifier()).thenReturn(damageModifier);
         when(stats.getStrength()).thenReturn(STRENGTH);
@@ -47,6 +45,7 @@ public class PlayerTest {
 
 
         Damage damage = new Player(inventory, stats).calculateDamage(target);
+
         assertEquals(expectedDamage, damage.getAmount());
     }
 
