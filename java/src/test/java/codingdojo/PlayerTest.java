@@ -43,7 +43,6 @@ public class PlayerTest {
         when(stats.getStrength()).thenReturn(STRENGTH);
         when(target.getSoak()).thenReturn(DAMAGE_SOAK);
 
-
         Damage damage = new Player(inventory, stats).calculateDamage(target);
 
         assertEquals(expectedDamage, damage.getAmount());
