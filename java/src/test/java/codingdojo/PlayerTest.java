@@ -1,7 +1,5 @@
 package codingdojo;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +11,7 @@ public class PlayerTest {
 
     // choose this one if you are familiar with mocks
     @Test
-    void damageCalculationsWithMocks() {
+    void calculatesDamageWhenPlayerIsEquippedWithFlashySwordOfDangerInHisRightHand() {
         Inventory inventory = mock(Inventory.class);
         Stats stats = mock(Stats.class);
         SimpleEnemy target = mock(SimpleEnemy.class);
