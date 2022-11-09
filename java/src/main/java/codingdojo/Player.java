@@ -21,8 +21,6 @@ class Player extends Target {
     private int getSoak(Target target, int totalDamage) {
         int soak = 0;
         if (target instanceof Player) {
-            // TODO: Not implemented yet
-            //  Add friendly fire
             soak = totalDamage;
         } else if (target instanceof SimpleEnemy) {
             SimpleEnemy simpleEnemy = (SimpleEnemy) target;
