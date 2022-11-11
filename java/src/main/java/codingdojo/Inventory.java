@@ -12,10 +12,7 @@ public class Inventory {
     }
 
     public float getDamageModifier(){
-        return (float) equipment.getAllItems()
-          .stream()
-          .mapToDouble(Item::getDamageModifier)
-          .sum();
+        return (float) equipment.getDamageModifier();
     }
     }
 

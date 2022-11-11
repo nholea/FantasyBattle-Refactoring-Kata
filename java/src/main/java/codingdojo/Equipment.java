@@ -28,4 +28,11 @@ class Equipment {
           .mapToInt(Item::getBaseDamage)
           .sum();
     }
+
+    public float getDamageModifier(){
+        return (float) getAllItems()
+          .stream()
+          .mapToDouble(Item::getDamageModifier)
+          .sum();
+    }
 }
