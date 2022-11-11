@@ -8,10 +8,7 @@ public class Inventory {
     }
 
     public int getBaseDamage(){
-        return equipment.getAllItems()
-          .stream()
-          .mapToInt(Item::getBaseDamage)
-          .sum();
+        return equipment.getBaseDamage();
     }
 
     public float getDamageModifier(){

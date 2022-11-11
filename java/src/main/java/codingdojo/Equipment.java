@@ -21,4 +21,11 @@ class Equipment {
     List<Item> getAllItems() {
         return List.of(leftHand, rightHand, head, feet, chest);
     }
+
+    public int getBaseDamage(){
+        return getAllItems()
+          .stream()
+          .mapToInt(Item::getBaseDamage)
+          .sum();
+    }
 }
