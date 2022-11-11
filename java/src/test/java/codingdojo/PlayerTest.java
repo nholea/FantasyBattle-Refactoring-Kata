@@ -22,7 +22,6 @@ public class PlayerTest {
     SimpleEnemy target = mock(SimpleEnemy.class);
     when(inventory.getBaseDamage()).thenReturn(baseDamage);
     when(inventory.getDamageModifier()).thenReturn(damageModifier);
-    when(stats.getStrength()).thenReturn(STRENGTH);
     when(target.getSoak()).thenReturn(DAMAGE_SOAK);
 
     Damage damage = new Player(inventory, stats).calculateDamage(target);
@@ -39,7 +38,6 @@ public class PlayerTest {
     SimpleEnemy target = mock(SimpleEnemy.class);
     when(inventory.getBaseDamage()).thenReturn(baseDamage);
     when(inventory.getDamageModifier()).thenReturn(damageModifier);
-    when(stats.getStrength()).thenReturn(STRENGTH);
     when(target.getSoak()).thenReturn(DAMAGE_SOAK);
 
     Damage damage = new Player(inventory, stats).calculateDamage(target);
