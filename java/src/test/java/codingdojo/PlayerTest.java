@@ -11,8 +11,6 @@ public class PlayerTest {
 
   private final int DAMAGE_SOAK = 5;
 
-  private final int STRENGTH = 0;
-
   @ParameterizedTest
   @CsvSource({"10, 1.0f,5", "10,2.4f,19", "10, 2.5f,20", "10, 3.7f,32", "10,5.1f,46"})
   void calculatesDamageWhenPlayerIsEquippedWithFlashySwordOfDangerInHisRightHandAndOtherItems(int baseDamage, float damageModifier,
