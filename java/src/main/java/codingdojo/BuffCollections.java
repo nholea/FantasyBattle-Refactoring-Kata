@@ -4,7 +4,6 @@ import java.util.List;
 
 public class BuffCollections {
 
-
   static float getSoakModifier(List<Buff> buffs) {
     return ((float) buffs
       .stream()
