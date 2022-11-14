@@ -18,6 +18,4 @@ public class SimpleEnemy extends Target {
             BuffCollections.getSoakModifier(buffs)
         );
     }
-
-
 }
