@@ -12,7 +12,7 @@ public class Inventory {
     }
 
     public float getDamageModifier(){
-        return (float) equipment.getDamageModifier();
+        return equipment.getDamageModifier();
     }
     }
 
