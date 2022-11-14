@@ -18,15 +18,13 @@ class Player extends Target {
     }
 
     private int getSoak(Target target, int totalDamage) {
-        int soak = 0;
-        if (target instanceof Player) {
-            soak = totalDamage;
-        } else if (target instanceof SimpleEnemy) {
+        if (target instanceof SimpleEnemy){
             SimpleEnemy simpleEnemy = (SimpleEnemy) target;
-            soak = simpleEnemy.getSoak();
+               return simpleEnemy.getSoak();
         }
-        return soak;
+        return totalDamage;
     }
+
     private float getDamageModifier() {
         return inventory.getDamageModifier() + stats.getStrengthModifier();
     }
