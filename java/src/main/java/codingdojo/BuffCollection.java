@@ -2,7 +2,7 @@ package codingdojo;
 
 import java.util.List;
 
-public class BuffCollections {
+public class BuffCollection {
 
   static float getSoakModifier(List<Buff> buffs) {
     return ((float) buffs
