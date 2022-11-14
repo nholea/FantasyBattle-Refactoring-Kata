@@ -1,6 +1,5 @@
 package codingdojo;
 
-
 class Player extends Target {
     private final Inventory inventory;
     private final Stats stats;
@@ -31,7 +30,4 @@ class Player extends Target {
     private float getDamageModifier() {
         return inventory.getDamageModifier() + stats.getStrengthModifier();
     }
-
-
-
 }
